@@ -19,6 +19,7 @@ body {
 }
 .container {
   max-width: 900px;
+  min-height: 100vh; /* 調整Container大小 */
   margin: auto;
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
