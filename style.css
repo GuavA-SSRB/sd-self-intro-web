@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("background.jpeg") no-repeat center center/cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+.left-column {
+  text-align: left;
+}
+.right-column {
+  text-align: left;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  opacity: 1;
+  padding-top: 9px; /* 增加間距 */
+  padding-bottom: 10px; /* 增加間距 */
+}
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+.profile {
+  padding-bottom: 10px; /* 增加間距 */
+}
+.info {
+  padding-bottom: 10px; /* 增加間距 */
+}
+.info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.info li {
+  background: none;
+  padding: 5px;
+  border-radius: 0;
+}
+.label {
+  display: inline-block;
+  background: #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.contact {
+  padding-top: 10px; /* 增加間距 */
+}
+.contact .icon {
+  font-size: 24px;
+  margin: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+}
+.contact .icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* RWD 設計 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+    gap: 0; /* 移除左右兩欄之間的間隔 */
+  }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .left-column,
+  .right-column {
+    text-align: left;
+    padding: 10px 0; /* 確保上下排列時不會有過大的間距 */
+  }
+}
